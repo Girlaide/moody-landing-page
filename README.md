@@ -26,6 +26,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 - [Node.js](https://nodejs.org/pt)
 - [pnpm](https://pnpm.io/pt/) (ou outro gerenciador de pacotes)
 
+---
 
 ## ⚙️ Como Rodar o Projeto
 Siga os passos abaixo para configurar e rodar o projeto em seu ambiente local:
