@@ -1,69 +1,68 @@
-# React + TypeScript + Vite
+# Moody Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma landing page moderna construída com Vite, React, TypeScript e estilizada com Tailwind CSS. Ele é configurado com ferramentas de qualidade de código como ESLint e Prettier para garantir um desenvolvimento consistente e livre de erros.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📃 Guia Técnico 
 
-## Expanding the ESLint configuration
+Para garantir a consistência, todo o desenvolvimento deve seguir as diretrizes de padronização detalhadas em nosso [Guia Técnico](https://docs.google.com/document/d/17anntQVBceitos4YcOjVkHFWRf0DzGkzsm-oEImyC94/edit?tab=t.0).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 💻 Tecnologias Utilizadas
+- [Vite](https://vite.dev/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## 📋 Pré-requisitos
+Antes de começar, você vai precisar ter instalado em sua máquina:
+
+- [Node.js](https://nodejs.org/pt)
+- [pnpm](https://pnpm.io/pt/) (ou outro gerenciador de pacotes)
+
+
+## ⚙️ Como Rodar o Projeto
+Siga os passos abaixo para configurar e rodar o projeto em seu ambiente local:
+
+```bash
+# 1. Clone este repositório
+$ git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
+# 2. Acesse a pasta do projeto no seu terminal
+$ cd nome-do-repositorio
+
+# 3. Instale as dependências
+$ pnpm install
+
+# 4. Rode a aplicação em modo de desenvolvimento
+$ pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Após executar o último comando, abra `http://localhost:5173` (ou a porta indicada no terminal) no seu navegador para ver o resultado.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+## 📜 Scripts Disponíveis
+No `package.json`, você encontrará os seguintes scripts:
+
+- `pnpm dev`: Inicia o servidor de desenvolvimento.
+- `pnpm build`: Compila e otimiza a aplicação para produção na pasta dist/.
+- `pnpm lint`: Executa o ESLint para analisar o código em busca de erros e problemas de estilo.
+- `pnpm format`: Formata todos os arquivos do projeto com o Prettier.
+- `pnpm preview`: Inicia um servidor local para visualizar a versão de produção (após rodar pnpm build).
+
+---
+
+## ✨ Qualidade de Código
+Este projeto utiliza ESLint e Prettier para manter a qualidade e a consistência do código.
+
+- Para verificar por erros, rode: `pnpm lint`
+- Para formatar todo o código automaticamente, rode: `pnpm format`
+
+É altamente recomendado configurar seu editor de código para formatar ao salvar (Format on Save) para uma melhor experiência de desenvolvimento.
