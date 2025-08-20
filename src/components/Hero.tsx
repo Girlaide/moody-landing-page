@@ -1,3 +1,9 @@
+import { Button } from './Button';
+
 export function Hero() {
-  return <div className="hero bg-red-500"></div>;
+  return (
+    <>
+      <h2 className="text-red-500">Exemplo!</h2>
+    </>
+  );
 }
