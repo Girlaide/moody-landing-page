@@ -1,7 +1,3 @@
 export function Hero() {
-  return (
-    <>
-      <h2 className="text-red-500">Exemplo!</h2>
-    </>
-  );
+  return <div className="hero bg-red-500"></div>;
 }
